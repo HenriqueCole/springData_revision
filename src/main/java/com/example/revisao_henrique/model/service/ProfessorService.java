@@ -30,7 +30,7 @@ public class ProfessorService {
         professorRepository.deleteById(aLong);
     }
 
-    public List<Professor> findAll(Sort sort) {
-        return professorRepository.findAll(sort);
+    public List<Professor> findAll() {
+        return professorRepository.findAll();
     }
 }

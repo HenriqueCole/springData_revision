@@ -30,7 +30,7 @@ public class TurmaService {
         turmaRepository.deleteById(aLong);
     }
 
-    public List<Turma> findAll(Sort sort) {
-        return turmaRepository.findAll(sort);
+    public List<Turma> findAll() {
+        return turmaRepository.findAll();
     }
 }

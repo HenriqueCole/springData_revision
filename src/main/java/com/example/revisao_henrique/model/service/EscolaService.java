@@ -30,7 +30,7 @@ public class EscolaService {
         escolaRepository.deleteById(aLong);
     }
 
-    public List<Escola> findAll(Sort sort) {
-        return escolaRepository.findAll(sort);
+    public List<Escola> findAll() {
+        return escolaRepository.findAll();
     }
 }

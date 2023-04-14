@@ -30,7 +30,7 @@ public class AlunoService {
         alunoRepository.deleteById(aLong);
     }
 
-    public List<Aluno> findAll(Sort sort) {
-        return alunoRepository.findAll(sort);
+    public List<Aluno> findAll() {
+        return alunoRepository.findAll();
     }
 }

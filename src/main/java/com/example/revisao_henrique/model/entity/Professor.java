@@ -10,7 +10,6 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@RequiredArgsConstructor
 public class Professor {
 
     @Id
@@ -31,7 +30,7 @@ public class Professor {
     @ManyToOne
     private Escola escola;
 
-    @JoinColumn(name = "lista_de_disciplinas", nullable = false)
+    @Column(name = "lista_de_disciplinas")
     @ManyToMany(mappedBy = "listaDeProfessores")
     private List<Disciplina> listaDeDisciplinas;
 

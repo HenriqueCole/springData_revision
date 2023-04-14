@@ -30,7 +30,7 @@ public class CursoService {
         cursoRepository.deleteById(aLong);
     }
 
-    public List<Curso> findAll(Sort sort) {
-        return cursoRepository.findAll(sort);
+    public List<Curso> findAll() {
+        return cursoRepository.findAll();
     }
 }

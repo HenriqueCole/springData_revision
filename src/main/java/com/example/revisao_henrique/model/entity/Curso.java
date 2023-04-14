@@ -10,7 +10,6 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@RequiredArgsConstructor
 public class Curso {
 
     @Id
@@ -21,7 +20,7 @@ public class Curso {
     @Column(name = "nome_curso", length = 100, nullable = false)
     private String nome;
 
-    @JoinColumn(name = "lista_de_disciplinas", nullable = false)
+    @JoinColumn(name = "id_curso")
     @OneToMany
     private List<Disciplina> listaDeDisciplinas;
 }

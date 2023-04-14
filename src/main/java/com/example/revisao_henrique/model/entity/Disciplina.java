@@ -1,5 +1,6 @@
 package com.example.revisao_henrique.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -10,7 +11,6 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@RequiredArgsConstructor
 public class Disciplina {
 
     @Id
@@ -23,5 +23,6 @@ public class Disciplina {
 
     @JoinColumn(name = "id_professor")
     @ManyToMany
+    @JsonIgnore
     private List<Professor> listaDeProfessores;
 }

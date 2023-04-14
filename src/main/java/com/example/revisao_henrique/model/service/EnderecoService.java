@@ -30,7 +30,7 @@ public class EnderecoService {
         enderecoRepository.deleteById(aLong);
     }
 
-    public List<Endereco> findAll(Sort sort) {
-        return enderecoRepository.findAll(sort);
+    public List<Endereco> findAll() {
+        return enderecoRepository.findAll();
     }
 }

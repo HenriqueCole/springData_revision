@@ -1,5 +1,6 @@
 package com.example.revisao_henrique.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -10,7 +11,6 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@RequiredArgsConstructor
 public class Escola {
     @Id
     @Column(name = "id_escola")
@@ -27,11 +27,11 @@ public class Escola {
     @Column(name = "email_escola", length = 100, nullable = false)
     private String email;
 
-    @JoinColumn(name = "lista_de_professores", nullable = false)
-    @OneToMany
+    @OneToMany(mappedBy = "escola")
+    @JsonIgnore
     private List<Professor> listaDeProfessores;
 
-    @JoinColumn(name = "lista_de_cursos", nullable = false)
+    @JoinColumn(name = "id_escola")
     @OneToMany
     private List<Curso> listaDeCursos;
 }
